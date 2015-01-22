@@ -12,7 +12,7 @@ namespace WebApplication3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            NpgsqlConnection conn = new NpgsqlConnection("Server=127.0.0.1; Port=5432; Database=Assignment1; User Id=postgres; Password=astronauta;");
+            NpgsqlConnection conn = new NpgsqlConnection("Server=127.0.0.1; Port=5432; Database=Assignment1; User Id=postgres; Password=engi3675;");
             conn.Open();
 
             NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM public.\"Paints\"", conn);

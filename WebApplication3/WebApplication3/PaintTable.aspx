@@ -4,9 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>ENGI3675 ASP Project 1</title>
+    <link href="./stylish.css" rel="stylesheet">
 </head>
 <body>
+    <div id="Heading1"><h1>ENGI3675 ASP Paint Inventory Management System:</h1></div>
     <form id="form1" runat="server">
     <div>
         <asp:Table ID="tblPaints" runat="server" BorderWidth="1">
