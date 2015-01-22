@@ -18,16 +18,19 @@ Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Docs", "Docs\Docs.shfbproj"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
+		SccNumberOfProjects = 4
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://levimmartins.visualstudio.com/defaultcollection
-		SccProjectUniqueName0 = Docs\\Docs.shfbproj
-		SccProjectName0 = Docs
-		SccLocalPath0 = Docs
-		SccLocalPath1 = .
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Docs\\Docs.shfbproj
+		SccProjectName1 = Docs
+		SccLocalPath1 = Docs
 		SccProjectUniqueName2 = WebApplication3\\WebApplication3.csproj
 		SccProjectName2 = WebApplication3
 		SccLocalPath2 = WebApplication3
+		SccProjectUniqueName3 = ..\\UnitTestProject1\\UnitTestProject1\\UnitTestProject1.csproj
+		SccProjectName3 = ../UnitTestProject1/UnitTestProject1
+		SccLocalPath3 = ..\\UnitTestProject1\\UnitTestProject1
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
