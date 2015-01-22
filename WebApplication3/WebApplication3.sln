@@ -12,9 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FCF2A7
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "..\UnitTestProject1\UnitTestProject1\UnitTestProject1.csproj", "{3D32FF56-9A2D-4D77-A507-8ECF2DCC52AD}"
-EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Docs", "Docs\Docs.shfbproj", "{DF5E91A2-4575-4172-B34F-54C178C4E4D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication3UNITtest", "WebApplication3UNITtest\WebApplication3UNITtest.csproj", "{6C116828-8B27-4B13-9A31-6F36BBB2C74C}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
@@ -28,9 +28,9 @@ Global
 		SccProjectUniqueName2 = WebApplication3\\WebApplication3.csproj
 		SccProjectName2 = WebApplication3
 		SccLocalPath2 = WebApplication3
-		SccProjectUniqueName3 = ..\\UnitTestProject1\\UnitTestProject1\\UnitTestProject1.csproj
-		SccProjectName3 = ../UnitTestProject1/UnitTestProject1
-		SccLocalPath3 = ..\\UnitTestProject1\\UnitTestProject1
+		SccProjectUniqueName3 = WebApplication3UNITtest\\WebApplication3UNITtest.csproj
+		SccProjectName3 = WebApplication3UNITtest
+		SccLocalPath3 = WebApplication3UNITtest
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,14 +41,14 @@ Global
 		{DA8BB670-2B47-4416-B5D1-7675975B9FB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA8BB670-2B47-4416-B5D1-7675975B9FB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA8BB670-2B47-4416-B5D1-7675975B9FB8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D32FF56-9A2D-4D77-A507-8ECF2DCC52AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D32FF56-9A2D-4D77-A507-8ECF2DCC52AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D32FF56-9A2D-4D77-A507-8ECF2DCC52AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D32FF56-9A2D-4D77-A507-8ECF2DCC52AD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DF5E91A2-4575-4172-B34F-54C178C4E4D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DF5E91A2-4575-4172-B34F-54C178C4E4D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF5E91A2-4575-4172-B34F-54C178C4E4D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF5E91A2-4575-4172-B34F-54C178C4E4D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C116828-8B27-4B13-9A31-6F36BBB2C74C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C116828-8B27-4B13-9A31-6F36BBB2C74C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C116828-8B27-4B13-9A31-6F36BBB2C74C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C116828-8B27-4B13-9A31-6F36BBB2C74C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
