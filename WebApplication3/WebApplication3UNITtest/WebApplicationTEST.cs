@@ -9,19 +9,25 @@ namespace WebApplication3UNITtest
      [TestClass]
      public class WebApplicationTEST
      {
+        Dictionary<string, int> ExpectValues = new Dictionary<string,int>()
+            {
+                {"Red",3},
+                {"Turnquoise", 17},
+                {"Grey", 5},
+                {"Indigo",6}
+            };
+
           [TestMethod]
           public void TestMethod1()
           {
-              Dictionary<string, int> ExpectValues = new Dictionary<string,int>()
-              {
-                    {"Red",3},
-                    {"Turnquoise", 17},
-                    {"Grey", 5},
-                    {"Indigo",6}
-              };
-              WebApplication3.PaintTable test;
-              test
+              
+              WebApplication3.PaintTable test = new PaintTable();
+              Dictionary<string,int> DatabaseValues = test.DataDict();
 
+              foreach (KeyValuePair<string, int> entry in ExpectValues)
+              {
+                  Assert
+              }
               
 
               }

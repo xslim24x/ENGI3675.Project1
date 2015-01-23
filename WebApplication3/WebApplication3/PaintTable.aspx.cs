@@ -47,5 +47,26 @@ namespace WebApplication3
 
             conn.Close();
         }
+
+        public Dictionary<string, int> DataDict()
+        {
+            Dictionary<string, int> results = new Dictionary<string,int>();
+
+            NpgsqlConnection conn = new NpgsqlConnection("Server=127.0.0.1; Port=5432; Database=Assignment1; User Id=postgres; Password=engi3675;");
+            conn.Open();
+
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM public.\"Paints\"", conn);
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                results.Add((string) dr[0], (int) dr[1]);
+              }
+
+            conn.Close();
+
+            return results;
+        }
+
     }
 }
