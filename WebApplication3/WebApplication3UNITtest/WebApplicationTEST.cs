@@ -1,8 +1,11 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebApplication3;
-using System.Collections.Generic;   
+using System.Collections.Generic;
+using System.Web;
+using System.Web.UI;
 using System.Web.UI.WebControls;
+
 
 namespace WebApplication3UNITtest
 {
@@ -12,25 +15,44 @@ namespace WebApplication3UNITtest
         Dictionary<string, int> ExpectValues = new Dictionary<string,int>()
             {
                 {"Red",3},
-                {"Turnquoise", 17},
+                {"Turquoise", 17},
                 {"Grey", 5},
                 {"Indigo",6}
             };
 
           [TestMethod]
-          public void TestMethod1()
+          public void DatabaseTest()
           {
-              
+
               WebApplication3.PaintTable test = new PaintTable();
               Dictionary<string,int> DatabaseValues = test.DataDict();
 
-              foreach (KeyValuePair<string, int> entry in ExpectValues)
+            
+              foreach (KeyValuePair<string, int> entry in DatabaseValues)
               {
-                  Assert
+                  if (ExpectValues.ContainsKey(entry.Key))
+                  {
+                      if (entry.Value != ExpectValues[entry.Key])
+                      {
+                          Console.WriteLine("Database contains {1} for the expected value of {2} for: {0}", entry.Key, entry.Value, ExpectValues[entry.Key]);
+                          Assert.AreEqual(ExpectValues[entry.Key], entry.Value);
+                      }
+                      ExpectValues.Remove(entry.Key);
+                  }
+                  else
+                  {
+                      Console.WriteLine("Database contains an extra row: {0} {1}", entry.Key, entry.Value);
+                      Assert.IsTrue(ExpectValues.ContainsKey(entry.Key));
+                  }
+              }
+             
+              foreach (KeyValuePair<string,int> entry in ExpectValues)
+              {
+                  Console.WriteLine("Expected value was missing: {0} {1}", entry.Key, entry.Value);
+                  Assert.IsNull(entry.Key);
               }
               
 
-              }
-          }
-     }
+            }
+       }
 }
