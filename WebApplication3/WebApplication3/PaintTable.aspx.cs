@@ -23,42 +23,42 @@ namespace WebApplication3
             //opening a connection can cause errors, so we will catch any exceptions using the try/catch/finally blocks
             try
             {
-            conn.Open();
+                conn.Open();
 
                 //query the database and begin reading results
-            NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM public.\"Paints\"", conn);
-            NpgsqlDataReader dr = cmd.ExecuteReader();
+                NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM public.\"Paints\"", conn);
+                NpgsqlDataReader dr = cmd.ExecuteReader();
 
                 //iterate through rows and create asp columns for the webpage
-            while (dr.Read())
-            {
+                while (dr.Read())
+                {
                     //convert pulled results to strings
-                string column1 = String.Format("{0}\n", dr[0]);
-                string column2 = String.Format("{0}\n", dr[1]);
+                    string column1 = String.Format("{0}\n", dr[0]);
+                    string column2 = String.Format("{0}\n", dr[1]);
 
                     //create a row for each row pulled
-                TableRow NewRow1 = new TableRow();
-                TableCell NewCell1 = new TableCell();
-                TableCell NewCell2 = new TableCell();
+                    TableRow NewRow1 = new TableRow();
+                    TableCell NewCell1 = new TableCell();
+                    TableCell NewCell2 = new TableCell();
 
-                NewRow1.Cells.Add(NewCell1);
-                NewRow1.Cells.Add(NewCell2);
+                    NewRow1.Cells.Add(NewCell1);
+                    NewRow1.Cells.Add(NewCell2);
 
-                Label newLable1 = new Label();
-                Label newLable2 = new Label();
+                    Label newLable1 = new Label();
+                    Label newLable2 = new Label();
 
-                newLable1.Text = column1;
-                newLable2.Text = column2;
+                    newLable1.Text = column1;
+                    newLable2.Text = column2;
 
                     //add labels to each cell and add cells to the rows
-                NewCell1.Controls.Add(newLable1);
-                NewCell2.Controls.Add(newLable2);
+                    NewCell1.Controls.Add(newLable1);
+                    NewCell2.Controls.Add(newLable2);
 
-                NewRow1.Cells.Add(NewCell1);
-                NewRow1.Cells.Add(NewCell2);
+                    NewRow1.Cells.Add(NewCell1);
+                    NewRow1.Cells.Add(NewCell2);
                 
-                tblPaints.Rows.Add(NewRow1);
-            }
+                    tblPaints.Rows.Add(NewRow1);
+                }
             }
             //catch general exceptions by closing connection
             catch (NpgsqlException ex)
@@ -67,8 +67,8 @@ namespace WebApplication3
             }
             finally
             {
-            conn.Close();
-        }
+                conn.Close();
+            }
         }
         /// <summary>
         /// for QA testing, we add our results to a dictionary for comparisons
