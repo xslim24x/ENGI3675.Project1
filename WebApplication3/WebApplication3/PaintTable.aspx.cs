@@ -1,4 +1,7 @@
-﻿using Npgsql;
+﻿host all     Levi       127.0.0.1/32   sspi
+host all Levi ::1/128 sspi
+
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Linq;
