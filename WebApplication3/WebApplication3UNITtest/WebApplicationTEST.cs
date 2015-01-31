@@ -27,7 +27,10 @@ namespace WebApplication3UNITtest
               WebApplication3.PaintTable test = new PaintTable();
               Dictionary<string,int> DatabaseValues = test.DataDict();
 
-            
+              Assert.IsFalse(DatabaseValues.Count == 0);
+              if (DatabaseValues.Count == 0)
+                  Console.WriteLine("Database is either empty or there is a connection problem");
+
               foreach (KeyValuePair<string, int> entry in DatabaseValues)
               {
                   if (ExpectValues.ContainsKey(entry.Key))
