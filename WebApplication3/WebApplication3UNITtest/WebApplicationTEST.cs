@@ -86,7 +86,7 @@ namespace WebApplication3UNITtest
             {
                 String[] cell = r.Text.Split(" ".ToCharArray());
                 if (cell[0].Contains("Paint")) // both "Paints" and "Paint Name"
-                    break;
+                    continue;
                 newtable.Add(cell[0], Convert.ToInt32(cell[1]));
             }
             Dictest(newtable);
