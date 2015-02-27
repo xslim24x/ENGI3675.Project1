@@ -27,33 +27,22 @@ namespace WebApplication3UNITtest
             };
 
 
-            Assert.IsFalse(indict.Count == 0);
-            if (indict.Count == 0)
-                Console.WriteLine("Tested table is either empty or there is a connection problem");
-
+            Assert.IsFalse(indict.Count == 0, "Tested table is either empty or there is a connection problem");
+            
             foreach (KeyValuePair<string, int> entry in indict)
             {
                 if (ExpectValues.ContainsKey(entry.Key))
                 {
-                    if (entry.Value != ExpectValues[entry.Key])
-                    {
-                        Console.WriteLine("Tested table contains {1} for the expected value of {2} for: {0}", entry.Key, entry.Value, ExpectValues[entry.Key]);
-                        Assert.AreEqual(ExpectValues[entry.Key], entry.Value);
-                    }
+                    Assert.AreEqual(ExpectValues[entry.Key], entry.Value, "Tested table contains " + entry.Value.ToString() + " for the expected value of {2} for: {0}" + ExpectValues[entry.Key].ToString() + " " + entry.Key.ToString());
                     ExpectValues.Remove(entry.Key);
                 }
                 else
-                {
-                    Console.WriteLine("Tested table contains an extra row: {0} {1}", entry.Key, entry.Value);
-                    Assert.IsTrue(ExpectValues.ContainsKey(entry.Key));
-                }
+                    Assert.IsTrue(ExpectValues.ContainsKey(entry.Key),"Tested table contains an extra row: " + entry.Key.ToString() +" "+ entry.Value.ToString());
             }
 
             foreach (KeyValuePair<string, int> entry in ExpectValues)
-            {
-                Console.WriteLine("Expected value was missing: {0} {1}", entry.Key, entry.Value);
-                Assert.IsNull(entry.Key);
-            }
+                Assert.IsNull(entry.Key, "Expected value was missing: " + entry.Key.ToString() +" "+ entry.Value.ToString());
+            
 
             return;
 
