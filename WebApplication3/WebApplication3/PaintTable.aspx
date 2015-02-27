@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>ENGI3675 ASP Project 1</title>
-    <link href="./stylish.css" rel="stylesheet">
+    <link href="./stylish.css" rel="stylesheet"/>
 </head>
 <body>
     <div id="Heading1"><h1>ENGI3675 ASP Paint Inventory Management System:</h1></div>
