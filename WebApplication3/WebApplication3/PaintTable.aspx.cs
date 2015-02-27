@@ -66,7 +66,7 @@ namespace WebApplication3
                     newRow1.Cells.Add(newCell1);
                     newRow1.Cells.Add(newCell2);
                 
-                    tblPaints.Rows.Add(newRow1);
+                    this.tblPaints.Rows.Add(newRow1);
                 }
             }
             finally
