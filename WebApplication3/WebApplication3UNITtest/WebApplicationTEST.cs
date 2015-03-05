@@ -92,7 +92,15 @@ namespace WebApplication3UNITtest
         [TestMethod]
         public void ieTest()
         {
+            //File file = new File("C:/Selenium/iexploredriver.exe");
+            //System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
+            
+
             InternetExplorerDriver ie = new InternetExplorerDriver();
+            
+
+
+
             BrowserTest(ie);
         }
         [TestMethod]
